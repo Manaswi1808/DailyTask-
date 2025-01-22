@@ -1,0 +1,63 @@
+#Q1. Declare a div() function with two parameters. 
+# Function to calculate the division of two numbers
+def div(numerator, denominator):
+#numerator (float): The number to be divided.
+#denominator (float): The number by which the numerator is divided.
+    # Check if the denominator is zero to avoid division by zero error
+    if denominator == 0:
+        return "Error: Division by zero is not allowed."
+    
+    return numerator / denominator
+
+# User input for the numerator and denominator
+num1 = float(input("Enter the numerator: "))  # The numerator
+num2 = float(input("Enter the denominator: "))  # The denominator
+
+# Call the function and display the result
+result = div(num1, num2)
+print(f"The result of dividing {num1} by {num2} is: {result}")
+--------------------------------------------------------------------------
+#Q2.Declare a square() function with one parameter.Then call the function and pass one
+# Function to calculate the square of a number
+def square(x):
+    # Return the square of the number
+    return x ** 2
+
+# User input for the number to be squared
+num = float(input("Enter a number to square: "))
+
+# Call the function and display the result
+result = square(num)
+print(f"The square of {num} is: {result}")
+-----------------------------------------------------------------------
+#Q3.Using max() and min() functions display the maximum and minimum of 5 random no
+# User input for 5 random numbers
+numbers = []
+for i in range(5):
+    num = float(input(f"Enter number {i+1}: "))
+    numbers.append(num)
+
+# Find the maximum and minimum of the list
+max_number = max(numbers)
+min_number = min(numbers)
+
+# Display the results
+print(f"The maximum number is: {max_number}")
+print(f"The minimum number is: {min_number}")
+---------------------------------------------------------
+#Q4.Accept a name from the user and display that in lower case using lower() function
+# Accept name from the user
+name = input("Enter your name: ")
+
+# Convert the name to lowercase and display it
+print("Your name in lowercase is:", name.lower())
+----------------------------------------------------------------
+#Q5.Lambda function to check if the number is positive, negative, or zero
+check_number = lambda x: 'Positive' if x > 0 else 'Negative' if x < 0 else 'Zero'
+
+# Test the lambda function with different numbers
+num1 = float(input("Enter a number: "))
+print(f"The number {num1} is {check_number(num1)}.")
+
+num2 = float(input("Enter another number: "))
+print(f"The number {num2} is {check_number(num2)}.")

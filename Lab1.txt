@@ -1,0 +1,47 @@
+# Q1.Calculate the multiplication and sum of two numbers 
+# Define two numbers a and b
+a = 5
+b = 3
+
+# Calculate multiplication and sum
+multiplication = a * b
+sum = a + b
+
+# Print the results
+print("Multiplication of 2 numbers=",multiplication)
+print("Sum of 2 numbers=",sum)
+#-----------------------------------------------------------------
+
+#Q2.Declare two variables and print that which variable is largest using ternary operators 
+# Declare two variables num1 and num2
+num1 = 15
+num2 = 30
+
+# Use the ternary operator to assign num1 to largest if it's greater than num2, else assign num2.
+largest = num1 if num1 > num2 else num2
+
+# Print the largest number
+print("The largest number is=", largest)
+#-----------------------------------------------------
+
+#Q3.Python program to convert the temperature in degree centigrade to Fahrenheit 
+# Input temperature in Celsius
+celsius = float(input("Enter temperature in Celsius= "))
+
+# Convert Celsius to Fahrenheit
+fahrenheit = (celsius * 9/5) + 32
+
+# Print the result
+print(f"{celsius}°C is equal to {fahrenheit}°F")
+#------------------------------------
+
+#Q4. Python program to find the area of a triangle whose sides are given
+# Input the base and height of the triangle
+base = float(input("Enter the base of the triangle= "))
+height = float(input("Enter the height of the triangle= "))
+
+# Calculate the area of the triangle
+area = 0.5 * base * height
+
+# Print the area
+print("Area of Triangle=",area)

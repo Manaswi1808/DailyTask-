@@ -48,7 +48,8 @@ for num in numbers:
 
 # Print the duplicate values
 print("Duplicate values are:", duplicates)
------------------------------------------------------------------------#Write a Python program to split a given list into two parts where the length of the first part of the list is given. 
+-----------------------------------------------------------------------
+#Write a Python program to split a given list into two parts where the length of the first part of the list is given. 
 # Define the original list
 original_list = [1, 1, 2, 3, 4, 4, 5, 1]
 

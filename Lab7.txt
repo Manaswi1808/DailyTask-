@@ -1,0 +1,71 @@
+#Write a Python program to count the occurrences of each word in a given sentence
+def count_word_occurrences(sentence):
+    # Convert the sentence to lowercase and split into words
+    words = sentence.lower().split()
+    # Create a dictionary to store word counts
+    word_count = {}
+    # Count occurrences of each word
+    for word in words:
+        word_count[word] = word_count.get(word, 0) + 1
+    return word_count
+# Get input from the user
+sentence = input("Enter a sentence: ")
+# Call the function and get the result
+word_counts = count_word_occurrences(sentence)
+# Display the word counts
+print("Word occurrences:")
+for word, count in word_counts.items():
+    print(f"{word}: {count}")
+
+--------------------------------------------------------------------------------------
+
+#Write a Python program to remove a newline in Python String
+def remove_newlines(input_string):
+    return input_string.replace('\n', ' ')
+
+# Get input string from the user
+user_input = input("Enter a string with newline characters: ")
+
+# Call the function to remove newlines
+result = remove_newlines(user_input)
+
+# Display the result
+print("String without newlines:")
+print(result)
+
+----------------------------------------------------------------------------------------
+
+#Write a Python program to reverse words in a string String
+def reverse_words(input_string):
+   
+    words = input_string.split()  # Split the string into words
+    reversed_words = words[::-1]  # Reverse the list of words
+    return ' '.join(reversed_words)  # Join the reversed words into a string
+
+# Get input string from the user
+user_input = input("Enter a string: ")
+
+# Call the function to reverse words
+result = reverse_words(user_input)
+
+# Display the result
+print("Reversed string:")
+print(result)
+
+------------------------------------------------------------------------------------------
+
+#Write a Python program to count and display the vowels of a given text String
+def count_and_display_vowels(input_string):
+    vowels = "aeiouAEIOU"
+    found_vowels = [char for char in input_string if char in vowels]  # Extract vowels
+    return len(found_vowels), ''.join(found_vowels)
+
+# Get input string from the user
+user_input = input("Enter a string: ")
+
+# Call the function to count and display vowels
+vowel_count, vowels_found = count_and_display_vowels(user_input)
+
+# Display the results
+print(f"Total number of vowels: {vowel_count}")
+print(f"Vowels found: {vowels_found}")

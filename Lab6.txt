@@ -1,0 +1,40 @@
+n = 5  # Number of rows
+i = 1
+
+while i <= n:
+    j = 1
+    # Print spaces
+    while j <= (n - i):
+        print(" ", end="")
+        j += 1
+    j = 1
+    # Print stars
+    while j <= i:
+        print("*", end="")
+        j += 1
+    print()
+    i += 1
+
+----------------------------------------------------------------
+
+n = 5  # Number of rows
+i = 1  # Initialize the row counter
+
+while i <= n:
+    pattern = ""
+    for j in range(i):
+        if j % 2 == 0:
+            pattern += "1"
+        else:
+            pattern += "0"
+    print(pattern)
+    i += 1
+-------------------------------------------------------------------
+
+n = 5  # Number of rows
+i = 0  # Initialize the loop variable
+while i < n:
+    spaces = " " * i  # Number of spaces before the pattern
+    numbers = "".join("1" if (i + j) % 2 == 0 else "0" for j in range(n - i))  # Alternate 1s and 0s
+    print(spaces + numbers)  # Print spaces followed by numbers
+    i += 1  # Increment the loop variable

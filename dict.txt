@@ -1,0 +1,66 @@
+def get_user_dict():
+    user_dict = {}
+    try:
+        n = int(input("Enter the number of key-value pairs: "))
+        for _ in range(n):
+            key = input("Enter key: ")
+            value = input("Enter value: ")
+            user_dict[key] = value
+    except ValueError:
+        print("Invalid input! Please enter a valid number.")
+    return user_dict
+
+
+def display_menu():
+    menu_options = [
+        "1. Get keys",
+        "2. Get values",
+        "3. Get items (key-value pairs)",
+        "4. Get value for a specific key",
+        "5. Remove a key-value pair",
+        "6. Check if a key exists",
+        "7. Clear dictionary",
+        "8. Exit"
+    ]
+    print("\nChoose a dictionary function to apply:")
+    print("\n".join(menu_options))
+
+
+def process_choice(choice, user_dict):
+    if choice == "1":
+        print("Keys:", list(user_dict.keys()))
+    elif choice == "2":
+        print("Values:", list(user_dict.values()))
+    elif choice == "3":
+        print("Items:", list(user_dict.items()))
+    elif choice == "4":
+        key = input("Enter the key to get its value: ")
+        print("Value:", user_dict.get(key, "Key not found"))
+    elif choice == "5":
+        key = input("Enter the key to remove: ")
+        print("Removed value:", user_dict.pop(key, "Key not found"))
+    elif choice == "6":
+        key = input("Enter key to check: ")
+        print("Exists" if key in user_dict else "Does not exist")
+    elif choice == "7":
+        user_dict.clear()
+        print("Dictionary cleared!")
+    elif choice == "8":
+        print("Exiting program.")
+        return False
+    else:
+        print("Invalid choice, try again.")
+    return True
+
+
+def main():
+    user_dict = get_user_dict()
+    while True:
+        display_menu()
+        choice = input("Enter your choice: ")
+        if not process_choice(choice, user_dict):
+            break
+
+
+if __name__ == "__main__":
+    main()

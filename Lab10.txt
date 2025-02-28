@@ -1,0 +1,87 @@
+#1Write a Python program and calculate the mean of the below dictionary. 
+test_dict = {"A" : 6, "B" : 9, "C" : 5, "D" : 7, "E" : 4}
+# Initialize an empty dictionary
+test_dict = {}
+
+# Get the number of elements
+n = int(input("Enter the number of elements: "))
+
+# Take user input for key-value pairs
+for i in range(n):
+    key = input(f"Enter key {i+1}: ")
+    value = int(input(f"Enter value for {key}: "))
+    test_dict[key] = value
+
+# Calculate the mean
+mean_value = sum(test_dict.values()) / len(test_dict)
+
+# Print the result
+print("The mean of the dictionary values is:", mean_value)
+
+------------------------------------------------------------------------------------------------
+#2Write a Python script to concatenate the following dictionaries to create a new one. Sample Dictionary : 
+# Function to take user input for a dictionary
+def get_dict(n):
+    user_dict = {}
+    for i in range(n):
+        key = int(input(f"Enter key {i+1}: "))
+        value = int(input(f"Enter value for key {key}: "))
+        user_dict[key] = value
+    return user_dict
+
+# Taking user input for number of dictionaries
+num_dicts = int(input("Enter the number of dictionaries: "))
+
+# Creating and storing dictionaries
+dict_list = []
+for i in range(num_dicts):
+    print(f"Enter elements for dictionary {i+1}:")
+    n = int(input(f"How many key-value pairs in dictionary {i+1}? "))
+    dict_list.append(get_dict(n))
+
+# Merging dictionaries
+merged_dict = {}
+for d in dict_list:
+    merged_dict.update(d)
+
+# Printing the result
+print("Merged Dictionary:", merged_dict)
+
+----------------------------------------------------------------------------------------------------
+#3Write a Python program to get the key, value and item in a dictionary. 
+# Given dictionary
+dict_num = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+
+# Printing keys
+print("Keys:", list(dict_num.keys()))
+
+# Printing values
+print("Values:", list(dict_num.values()))
+
+# Printing items (key-value pairs)
+print("Items:", list(dict_num.items()))
+
+-----------------------------------------------------------------------------------------------------
+#4Write a Python program to get the key, value and item in a dictionary. 
+# Function to take user input for a dictionary
+def get_user_dict():
+    user_dict = {}
+    n = int(input("Enter the number of key-value pairs: "))
+    for i in range(n):
+        key = int(input(f"Enter key {i+1}: "))
+        value_input = input(f"Enter value for key {key} (Press Enter for None): ")
+        value = int(value_input) if value_input.strip() else None  # Convert to int or set as None
+        user_dict[key] = value
+    return user_dict
+
+# Taking user input
+input_dict = get_user_dict()
+
+# Printing keys
+print("Keys:", list(input_dict.keys()))
+
+# Printing values
+print("Values:", list(input_dict.values()))
+
+# Printing items (key-value pairs)
+print("Items:", list(input_dict.items()))

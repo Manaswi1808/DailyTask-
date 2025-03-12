@@ -1,0 +1,25 @@
+CREATE DATABASE IF NOT EXISTS success;
+USE success;
+
+CREATE TABLE IF NOT EXISTS employee (
+    eid INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    dob DATE NOT NULL,
+    doj DATE NOT NULL,
+    location VARCHAR(100),
+    department VARCHAR(100),
+    address TEXT,
+    email VARCHAR(100) UNIQUE NOT NULL
+);
+
+INSERT INTO employee (name, dob, doj, location, department, address, email) VALUES
+('Amit Sharma', '1990-05-12', '2020-03-15', 'Mumbai', 'IT', '123 MG Road, Mumbai', 'amit.sharma@example.com'),
+('Neha Verma', '1995-08-25', '2021-07-01', 'Pune', 'HR', '456 Shivaji Nagar, Pune', 'neha.verma@example.com'),
+('Rahul Gupta', '1988-12-10', '2019-09-20', 'Delhi', 'Finance', '789 Connaught Place, Delhi', 'rahul.gupta@example.com'),
+('Priya Mehta', '1992-03-30', '2018-06-25', 'Bangalore', 'Marketing', '101 Indiranagar, Bangalore', 'priya.mehta@example.com'),
+('Vikas Singh', '1985-07-15', '2016-04-10', 'Hyderabad', 'Operations', '202 Banjara Hills, Hyderabad', 'vikas.singh@example.com'),
+('Ritu Kapoor', '1998-09-05', '2022-02-14', 'Chennai', 'Support', '303 Anna Nagar, Chennai', 'ritu.kapoor@example.com')
+ON DUPLICATE KEY UPDATE email = email; -- Prevents duplicate email error
+
+DESC employee;
+SELECT * FROM employee;
